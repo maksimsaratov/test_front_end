@@ -1,21 +1,19 @@
 @import "common-var.less";
 @import "mixins.less";
 
-@video-player-border-radius: 3px;
-
 .video-player {
   position: relative;
   margin: 0 auto;
   min-width: @content-min-width;
   max-width: @content-max-width;
+  border-radius: 3px;
+  overflow: hidden;
 
   .video-wrapper {
     position: relative;
     background-color: #00afd1;
     width: 100%;
     padding-bottom: 100% * 250/370;
-    border-radius: @video-player-border-radius;
-    overflow: hidden;
 
     video {
       display: block;
@@ -84,7 +82,6 @@
       width: 100%;
       background-color: #202226;
       opacity: 0.9;
-      border-radius: 0 0 @video-player-border-radius @video-player-border-radius;
     };
 
     .play-button {
@@ -94,7 +91,6 @@
       height: 100%;
       width: 100% * 50/370;
       background-color: #202226;
-      border-radius: 0 0 0 @video-player-border-radius;
       cursor: pointer;
 
       .icon {
@@ -159,7 +155,6 @@
       right: 0;
       height: 100%;
       width: 100% * 50/370;
-      border-radius: 0 0 @video-player-border-radius 0;
       cursor: pointer;
 
       .icon {
