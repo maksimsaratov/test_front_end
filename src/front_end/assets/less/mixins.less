@@ -2,3 +2,25 @@
   background: url('/images/svg/icon_@{object_name}_@{icon_name}.svg') no-repeat;
   background-size: 100% auto;
 }
+
+.flex-start-space-between() {
+  .display-flex;
+  .justify-content(space-between);
+  .align-items(start);
+}
+.display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.justify-content(@position) {
+  -webkit-justify-content: @position;
+  -ms-justify-content: @position;
+  justify-content: @position;
+}
+.align-items(@position) {
+  -webkit-align-items: @position;
+  -ms-align-items: @position;
+  align-items: @position;
+}

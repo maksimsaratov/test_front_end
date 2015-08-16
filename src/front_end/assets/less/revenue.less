@@ -1,0 +1,207 @@
+@import "common-var.less";
+@import "mixins.less";
+
+.revenue {
+  position: relative;
+  margin: 0 auto;
+  min-width: @content-min-width;
+  max-width: @content-max-width;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .visual {
+    position: relative;
+    background-color: #1fbba6;
+    padding-top: 100% * 290/370;
+
+    h1 {
+      position: absolute;
+      top: 100% * 22/290;
+      left: 0;
+      right: 0;
+      font-family: 'Signika', sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      color: #f1f1f3;
+      margin: 0;
+      text-align: center;
+    }
+
+    .chart {
+      position: absolute;
+      top: 100% * 65/290;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      .row {
+        position: relative;
+        height: 100% * 34/225;
+        margin-left: 100% * 62/370;
+        margin-right: 100% * 35/370;
+        border-bottom: 1px dashed #16a693;
+
+        &:first-of-type {
+          height: 0;
+        }
+
+        .value {
+          @value-font-size: 11px;
+          display: block;
+          position: absolute;
+          bottom: -@value-font-size/1.7;
+          left: -100% * 50/273;
+          width: 100% * 36/273;
+          text-align: right;
+          color: #ffffff;
+          font-size: @value-font-size;
+        }
+      }
+
+      .line {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100% * 62/370;
+      }
+
+      .months {
+        position: relative;
+        height: 100% * 49/225;
+        margin-left: 100% * 62/370;
+        margin-right: 100% * 35/370;
+
+        .unit {
+          display: block;
+          position: absolute;
+          top: 100% * 7/49;
+          color: #ffffff;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .inquiries {
+    position: relative;
+    padding-top: 100% * 123/370;
+    background-color: #ffffff;
+    margin-bottom: 1px;
+
+
+    h3 {
+      position: absolute;
+      top: 100% * 27/123;
+      left: 100% * 30/370;
+      color: #9ea7b3;
+      margin: 0;
+      font-size: 13px;
+      font-weight: 400;
+    }
+
+    .graph {
+      position: absolute;
+      top: 100% * 49/123;
+      left: 100% * 30/370;
+      width: 100% * 197/370;
+      height: 100% * 61/123;
+      .flex-start-space-between;
+
+      .item {
+        position: relative;
+        width: 100% * 10/197;
+        height: 100%;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .column {
+          position: relative;
+          height: 100% * 40/61;
+          background-color: #eaedf1;
+          border-radius: 2px;
+
+          .progress {
+            position: absolute;
+            height: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #1fbba6;
+            border-radius: 2px;
+          }
+        }
+
+        .unit {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 100% * 46/61;
+          font-size: 10px;
+          line-height: 100%;
+          color: #9ea7b3;
+          text-align: center;
+        }
+      }
+    }
+
+    .total {
+      position: absolute;
+      top: 100% * 47/123;
+      left: 100% * 260/370;
+      width: 100% * 110/370;
+      height: 100% * 65/123;
+
+      .number {
+        display: block;
+        height: 100% * 48/65;
+        width: 100%;
+        padding-left: 100% * 3/110;
+        font-family: 'Signika', sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        color: #1fbba6;
+      }
+      .description {
+        display: block;
+        font-size: 10px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #9ea7b3;
+      }
+    }
+  }
+
+  .summary {
+    position: relative;
+    padding-top: 100% * 103/370;
+    background-color: #ffffff;
+
+    .column {
+      position: absolute;
+      top: 100% * 18/103;
+
+      &.gross {
+        left: 100% * 29/370;
+      }
+      &.net {
+        left: 100% * 209/370;
+      }
+
+      .title {
+        display: block;
+        font-size: 12px;
+        color: #9ea7b3
+      }
+      .number {
+        display: block;
+        font-family: 'Signika', sans-serif;
+        font-size: 28px;
+        line-height: 140%;
+        font-weight: 400;
+        color: #1fbba6;
+      }
+    }
+  }
+}
