@@ -9,27 +9,6 @@
     <link href='http://fonts.googleapis.com/css?family=Signika:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-    <!-- START Pie Chart -->
-    <div class="tasks-progress">
-        <div class="header">
-            <h1>Tasks Completed</h1>
-        </div>
-        <div class="tab-content">
-            <div class="pie-chart">
-                <canvas class="js-pie-chart" width="200" height="200"></canvas>
-                <span class="progress">79</span>
-            </div>
-        </div>
-        <div class="tabs">
-            <ul>
-                <li class=""><span class="icon chart"></span><a href="#">CHART</a></li>
-                <li class="selected"><span class="icon tasks"></span><a href="#">TASKS</a></li>
-                <li class=""><span class="icon events"></span><a href="#">EVENTS</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- END Pie Chart -->
-
     <!-- START Video Player -->
     <div class="video-player">
         <div class="video-wrapper">
@@ -142,6 +121,66 @@
         </div>
     </div>
     <!-- END Revenue -->
+
+    <!-- START Pie Chart -->
+    <div class="tasks-progress">
+        <div class="header">
+            <h1>Tasks Completed</h1>
+        </div>
+        <div class="tab-content">
+            <div class="pie-chart">
+                <canvas class="js-pie-chart" width="200" height="200"></canvas>
+                <span class="progress">79</span>
+            </div>
+        </div>
+        <div class="tabs">
+            <ul>
+                <li class=""><span class="icon chart"></span><a href="#">CHART</a></li>
+                <li class="selected"><span class="icon tasks"></span><a href="#">TASKS</a></li>
+                <li class=""><span class="icon events"></span><a href="#">EVENTS</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END Pie Chart -->
+
+    <!-- START Mailbox -->
+    <div class="mailbox">
+        <div class="header">
+            <h1>Mailbox</h1>
+        </div>
+        <ul class="list">
+            <li class="inbox selected">
+                <span class="icon"></span>
+                <span class="amount">3</span>
+                <a href="#">Inbox</a>
+            </li>
+            <li class="starred">
+                <span class="icon"></span>
+                <span class="amount">7</span>
+                <a href="#">Starred</a>
+            </li>
+            <li class="flagged">
+                <span class="icon"></span>
+                <span class="amount">13</span>
+                <a href="#">Flagged</a>
+            </li>
+            <li class="sent">
+                <span class="icon"></span>
+                <span class="amount">284</span>
+                <a href="#">Sent</a>
+            </li>
+            <li class="deleted">
+                <span class="icon"></span>
+                <span class="amount">6</span>
+                <a href="#">Deleted</a>
+            </li>
+        </ul>
+        <div class="more">
+            <a href="#">More</a>
+            <span class="arrow"></span>
+        </div>
+    </div>
+    <!-- END Mailbox -->
 
     <script src="/js/app.js"></script>
 </body>

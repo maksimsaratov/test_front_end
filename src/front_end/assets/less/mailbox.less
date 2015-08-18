@@ -1,0 +1,194 @@
+@import "common-var.less";
+@import "mixins.less";
+
+.mailbox {
+  position: relative;
+  margin: 0 auto;
+  min-width: @popup-min-width;
+  max-width: @popup-max-width;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .header {
+    position: relative;
+    background-color: #323a45;
+    padding-top: 100% * 52/280;
+
+    h1 {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      height: 42%;
+      margin: auto;
+      text-align: center;
+      font-family: 'Signika', sans-serif;
+      font-size: 17px;
+      color: #f1f1f3;
+      font-weight: 400;
+    }
+  }
+
+  .list {
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: block;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      background-color: #ffffff;
+      padding-top: 100% * 50/280;
+      border-bottom: 1px solid #eaedf1;
+
+      .icon {
+        display: block;
+        position: absolute;
+        top: 100% * 17/50;
+        left: 100% * 30/280;
+        height: 100% * 16/50;
+        width: 100% * 16/280;
+      }
+
+      a {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 100% * 56/280;
+        padding-top: 100% * 15/280;;
+        margin: auto;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: 'Signika', sans-serif;
+        font-weight: 400;
+        color: #9ea7b3;
+      }
+
+      .amount {
+        display: block;
+        position: absolute;
+        box-sizing: border-box;
+        top: 100% * 15/50;
+        right: 100% * 30/280;
+        height: 100% * 20/50;
+        min-width: 100% * 20/280;
+        padding: 0 2.5%;
+        text-align: center;
+        border-radius: 100px;
+        font-size: 11px;
+        line-height: 185%;
+        color: #9ea7b3;
+        background-color: #dbe1e8;
+      }
+
+      &.inbox .icon {
+        .svg_icon_bg('mailbox', 'inbox');
+      }
+
+      &.starred .icon {
+        .svg_icon_bg('mailbox', 'starred');
+      }
+
+      &.flagged .icon {
+        left: 100% * 32/280;
+        width: 100% * 12/280;
+        .svg_icon_bg('mailbox', 'flagged');
+      }
+
+      &.sent .icon {
+        .svg_icon_bg('mailbox', 'sent');
+      }
+
+      &.deleted .icon {
+        width: 100% * 12/280;
+        .svg_icon_bg('mailbox', 'deleted');
+      }
+
+      &:hover {
+        background-color: #fafafa;
+      }
+
+      &.selected {
+        background-color: #9ea7b3;
+        border-bottom-color: #9ea7b3;
+
+        a {
+          color: #ffffff;
+        }
+
+        .amount {
+          background-color: #f27935;
+          color: #ffffff;
+        }
+
+        &.inbox .icon {
+          .svg_icon_bg('mailbox', 'inbox-selected');
+        }
+
+        &.starred .icon {
+          .svg_icon_bg('mailbox', 'starred-selected');
+        }
+
+        &.flagged .icon {
+          left: 100% * 32/280;
+          width: 100% * 12/280;
+          .svg_icon_bg('mailbox', 'flagged-selected');
+        }
+
+        &.sent .icon {
+          .svg_icon_bg('mailbox', 'sent-selected');
+        }
+
+        &.deleted .icon {
+          width: 100% * 12/280;
+          .svg_icon_bg('mailbox', 'deleted-selected');
+        }
+      }
+    }
+  }
+
+  .more {
+    position: relative;
+    background-color: #ffffff;
+    padding-top: 100% * 50/280;
+
+    &:hover {
+      background-color: #fafafa;
+    }
+
+    a {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-left: 100% * 31/280;
+      padding-top: 100% * 15/280;;
+      margin: auto;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: 'Signika', sans-serif;
+      font-weight: 400;
+      color: #9ea7b3;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 100% * 5/50;
+        width: 100% * 6/280;
+        margin: 1% 1% 0.5% 1%;
+        .svg_icon_bg('mailbox', 'more');
+      }
+    }
+  }
+}
