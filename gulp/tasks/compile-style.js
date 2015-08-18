@@ -1,13 +1,12 @@
 var gulp = require('gulp');
 var svgmin = require('gulp-svgmin');
-var clean = require('gulp-clean');
 var base64 = require('gulp-base64');
 var less = require('gulp-less');
 var cssmin = require('gulp-cssmin');
 var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 
-gulp.task('compile-style', ['svg-min'], function() {
+gulp.task('compile-style', function() {
     return gulp.src(['./src/front_end/assets/less/*.less'])
         .pipe(less())
         .pipe(base64({
