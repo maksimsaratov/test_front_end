@@ -6,9 +6,30 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Signika:400,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <!-- START Pie Chart -->
+    <div class="tasks-progress">
+        <div class="header">
+            <h1>Tasks Completed</h1>
+        </div>
+        <div class="tab-content">
+            <div class="pie-chart">
+                <canvas class="js-pie-chart" width="200" height="200"></canvas>
+                <span class="progress">79</span>
+            </div>
+        </div>
+        <div class="tabs">
+            <ul>
+                <li class=""><span class="icon chart"></span><a href="#">CHART</a></li>
+                <li class="selected"><span class="icon tasks"></span><a href="#">TASKS</a></li>
+                <li class=""><span class="icon events"></span><a href="#">EVENTS</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END Pie Chart -->
+
     <!-- START Video Player -->
     <div class="video-player">
         <div class="video-wrapper">
@@ -121,5 +142,7 @@
         </div>
     </div>
     <!-- END Revenue -->
+
+    <script src="/js/app.js"></script>
 </body>
 </html>

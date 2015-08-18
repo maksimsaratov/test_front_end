@@ -1,0 +1,173 @@
+@import "common-var.less";
+@import "mixins.less";
+
+.tasks-progress {
+  position: relative;
+  margin: 0 auto;
+  min-width: @popup-min-width;
+  max-width: @popup-max-width;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .header {
+    position: relative;
+    background-color: #323a45;
+    padding-top: 100% * 52/280;
+
+    h1 {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      height: 42%;
+      margin: auto;
+      text-align: center;
+      font-family: 'Signika', sans-serif;
+      font-size: 17px;
+      color: #f1f1f3;
+      font-weight: 400;
+    }
+  }
+
+  .tab-content {
+    background-color: #ffffff;
+
+    .pie-chart {
+      position: relative;
+      padding-top: 100%;
+
+      canvas {
+        display: block;
+        position: absolute;
+        top: 100% * 40/280;
+        left: 100% * 40/280;
+      }
+      .progress {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 4%;
+        right: 0;
+        width: 50%;
+        height: 27%;
+        margin: auto;
+        text-align: center;
+        font-size: 58px;
+        font-family: 'Signika', sans-serif;
+        font-weight: 300;
+        letter-spacing: -0.03em;
+        color: #ffffff;
+
+        &::after {
+          content: '%';
+          font-size: 24px;
+          position: relative;
+          top: -0.9em;
+          left: 3%;
+          color: #9ea7b3;
+        }
+      }
+    }
+  }
+
+  .tabs {
+    position: relative;
+    padding-top: 100% * 77/280;
+    
+    ul {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+
+      .flex-start-space-between;
+
+      li {
+        display: block;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        width: 100% / 3;
+        height: 100%;
+        border: 1px solid #eaedf1;
+        border-left: none;
+        border-bottom: none;
+        background-color: #f9fafc;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        a {
+          display: block;
+          position: absolute;
+          text-decoration: none;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          padding-top: 100% * 38/76;
+          font-size: 11px;
+          text-align: center;
+          color: #5e6d81;
+        }
+
+        .icon {
+          display: block;
+          position: absolute;
+
+          &.chart {
+            top: 100% * 16/76;
+            left: 100% * 38/92;
+            height: 100% * 19/76;
+            width: 100% * 18/92;
+            .svg_icon_bg('pie_chart', 'chart');
+          }
+          &.tasks {
+            top: 100% * 17/76;
+            left: 100% * 37/92;
+            height: 100% * 16/76;
+            width: 100% * 18/92;
+            .svg_icon_bg('pie_chart', 'tasks');
+          }
+          &.events {
+            top: 100% * 16/76;
+            left: 100% * 41/92;
+            height: 100% * 18/76;
+            width: 100% * 12/92;
+            .svg_icon_bg('pie_chart', 'events');
+          }
+        }
+
+        &.selected {
+          border-top-color: #ffffff;
+          background-color: #ffffff;
+
+          .icon.chart {
+            .svg_icon_bg('pie_chart', 'chart-selected');
+          }
+          .icon.tasks {
+            .svg_icon_bg('pie_chart', 'tasks-selected');
+          }
+          .icon.events {
+            .svg_icon_bg('pie_chart', 'events-selected');
+          }
+        }
+
+
+      }
+    }
+  }
+
+}
