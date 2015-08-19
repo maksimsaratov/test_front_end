@@ -7,10 +7,10 @@ var concat = require('gulp-concat');
 var connect = require('gulp-connect');
 
 gulp.task('compile-style', function() {
-    return gulp.src(['./src/front_end/assets/less/*.less'])
+    return gulp.src(['./src/www/assets/less/*.less'])
         .pipe(less())
         .pipe(base64({
-            baseDir: './src/front_end/assets/',
+            baseDir: './src/www/assets/',
             extensions: ['svg'],
             maxImageSize: 8*1024, // bytes
             debug: true
