@@ -109,6 +109,55 @@
           border-right: none;
         }
 
+        .icon {
+          display: block;
+          position: absolute;
+        }
+
+        &.chart {
+          .icon {
+            top: 100% * 16/76;
+            left: 100% * 38/92;
+            height: 100% * 19/76;
+            width: 100% * 18/92;
+            .svg_icon_bg('pie_chart', 'chart');
+          }
+        }
+
+        &.tasks {
+          .icon {
+            top: 100% * 17/76;
+            left: 100% * 37/92;
+            height: 100% * 16/76;
+            width: 100% * 18/92;
+            .svg_icon_bg('pie_chart', 'tasks');
+          }
+        }
+        &.events {
+          .icon{
+            top: 100% * 16/76;
+            left: 100% * 41/92;
+            height: 100% * 18/76;
+            width: 100% * 12/92;
+            .svg_icon_bg('pie_chart', 'events');
+          }
+        }
+
+        &.selected {
+          border-top-color: #ffffff;
+          background-color: #ffffff;
+
+          &.chart .icon {
+            .svg_icon_bg('pie_chart', 'chart-selected');
+          }
+          &.tasks .icon {
+            .svg_icon_bg('pie_chart', 'tasks-selected');
+          }
+          &.events .icon {
+            .svg_icon_bg('pie_chart', 'events-selected');
+          }
+        }
+
         a {
           display: block;
           position: absolute;
@@ -122,50 +171,6 @@
           text-align: center;
           color: #5e6d81;
         }
-
-        .icon {
-          display: block;
-          position: absolute;
-
-          &.chart {
-            top: 100% * 16/76;
-            left: 100% * 38/92;
-            height: 100% * 19/76;
-            width: 100% * 18/92;
-            .svg_icon_bg('pie_chart', 'chart');
-          }
-          &.tasks {
-            top: 100% * 17/76;
-            left: 100% * 37/92;
-            height: 100% * 16/76;
-            width: 100% * 18/92;
-            .svg_icon_bg('pie_chart', 'tasks');
-          }
-          &.events {
-            top: 100% * 16/76;
-            left: 100% * 41/92;
-            height: 100% * 18/76;
-            width: 100% * 12/92;
-            .svg_icon_bg('pie_chart', 'events');
-          }
-        }
-
-        &.selected {
-          border-top-color: #ffffff;
-          background-color: #ffffff;
-
-          .icon.chart {
-            .svg_icon_bg('pie_chart', 'chart-selected');
-          }
-          .icon.tasks {
-            .svg_icon_bg('pie_chart', 'tasks-selected');
-          }
-          .icon.events {
-            .svg_icon_bg('pie_chart', 'events-selected');
-          }
-        }
-
-
       }
     }
   }
