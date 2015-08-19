@@ -1,0 +1,125 @@
+@import "common-var.less";
+@import "mixins.less";
+
+.login {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: auto;
+  min-width: @popup-min-width;
+  max-width: @popup-max-width;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .field {
+    position: relative;
+    background-color: #ffffff;
+    padding-top: 100% * 52/280;
+    margin-bottom: 1px;
+    overflow: hidden;
+
+    label {
+      display: block;
+      position: absolute;
+    }
+
+    &.username {
+      label {
+        top: 100% * 17/52;
+        left: 100% * 20/280;
+        height: 100% * 18/52;
+        width: 100% * 18/280;
+        .svg_icon_bg('login', 'username');
+      }
+    }
+
+    &.password {
+      border-radius: 0 0 3px 3px;
+      margin-bottom: 100% * 16/280;
+
+      label {
+        top: 100% * 17/52;
+        left: 100% * 22/280;
+        height: 100% * 18/52;
+        width: 100% * 14/280;
+        .svg_icon_bg('login', 'password');
+      }
+    }
+
+    .wrapper {
+      display: block;
+      position: absolute;
+      top: 100% * 10/52;
+      bottom: 100% * 10/52;
+      right: 100% * 15/280;
+      left: 100% * 59/280;
+
+      input {
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: #5e6d81;
+        font-family: 'Signika', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+
+        &::-webkit-input-placeholder { opacity: 1; color: #dbe1e8; }
+        &::-moz-placeholder          { opacity: 1; color: #dbe1e8; }/* Firefox 19+ */
+        &:-moz-placeholder           { opacity: 1; color: #dbe1e8; }/* Firefox 18- */
+        &:-ms-input-placeholder      { opacity: 1; color: #dbe1e8; }
+
+        &:focus::-webkit-input-placeholder { color: transparent }
+        &:focus::-moz-placeholder          { color: transparent }/* Firefox 19+ */
+        &:focus:-moz-placeholder           { color: transparent }/* Firefox 18- */
+        &:focus:-ms-input-placeholder      { color: transparent }
+      }
+    }
+
+    label {
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 0;
+      margin: 0;
+      border: none;
+      background: none;
+    }
+  }
+
+  .submit {
+    position: relative;
+    padding-top: 100% * 50/280;
+    margin-bottom: 1px;
+    overflow: hidden;
+    border-radius: 3px;
+
+    .wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+
+      input {
+        display: block;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-color: #f27935;
+        color: #ffffff;
+        font-family: 'Signika', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+}
