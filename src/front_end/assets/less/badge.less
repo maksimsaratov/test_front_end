@@ -1,0 +1,123 @@
+@import "common-var.less";
+@import "mixins.less";
+
+.badge-popup {
+  position: relative;
+  margin: 0 auto;
+  min-width: @popup-min-width;
+  max-width: @popup-max-width;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .person {
+    position: relative;
+    background-color: #ffffff;
+    padding-top: 100% * 124/280;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 100% * 20/124;
+      left: 100% * 20/280;
+      height: 100% * 80/124;
+      width: 100% * 80/280;
+      border: none;
+      border-radius: 50%;
+    }
+
+    .info {
+      position: absolute;
+      top: 100% * 39/124;
+      left: 100% * 117/280;
+
+      h2 {
+        margin: 0 0 1% 0;
+        font-family: 'Signika', sans-serif;
+        font-weight: 400;
+        font-size: 22px;
+        color: #5e6d81;
+      }
+      .city {
+        display: block;
+        font-size: 12px;
+        color: #9ea7b3;
+        margin-left: 1%;
+      }
+    }
+  }
+
+  .statistic {
+    position: relative;
+    padding-top: 100% * 64/280;
+
+    ul {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+
+      .flex-start-space-between;
+
+      li {
+        display: block;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100% / 3;
+        height: 100%;
+
+        .icon {
+          display: block;
+          position: absolute;
+        }
+
+        &.likes {
+          background-color: #14b9d6;
+
+          .icon{
+            top: 100% * 15/64;
+            left: 100% * 37/93;
+            height: 100% * 16/64;
+            width: 100% * 18/93;
+            .svg_icon_bg('badge', 'likes');
+          }
+        }
+        &.followers {
+          background-color: #f27935;
+
+          .icon {
+            top: 100% * 14/64;
+            left: 100% * 38/93;
+            height: 100% * 18/64;
+            width: 100% * 18/93;
+            .svg_icon_bg('badge', 'followers');
+          }
+        }
+        &.viewed {
+          background-color: #1fbba6;
+
+          .icon {
+            top: 100% * 17/64;
+            left: 100% * 38/93;
+            height: 100% * 12/64;
+            width: 100% * 18/93;
+            .svg_icon_bg('badge', 'viewed');
+          }
+        }
+
+        .amount {
+          display: block;
+          padding-top: 100% * 27/64;
+          font-size: 11px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
